@@ -24,9 +24,14 @@ profile.cov
 go.work
 go.work.sum
 
+# npm
+node_modules/
+
 # env file
 .env
 
 # Editor/IDE
 # .idea/
 # .vscode/
+
+
