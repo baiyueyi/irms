@@ -1,0 +1,25 @@
+# Rule 08｜RBAC 范围
+
+- 当前版本只做 RBAC + 资源授权闭环。
+- 核心对象范围固定为：
+  - 用户（user）
+  - 用户组（group）
+  - 页面资源（page）
+  - 主机（host）
+  - 服务（service）
+  - 主机组（host_group）
+  - 服务组（service_group）
+  - 主机凭据（host_credential）
+  - 服务凭据（service_credential）
+- 基础权限集合固定为：
+  - `ReadOnly`
+  - `ReadWrite`
+- page 只表示前端页面/路由资源，不与 host、service 混用，不进入资源组。
+- 资源组当前只允许：
+  - `host_group`
+  - `service_group`
+- 当前版本不做：
+  - 审批流程
+  - 字段级权限
+  - 多租户
+  - 复杂策略引擎

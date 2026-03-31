@@ -1,0 +1,63 @@
+﻿{
+    "run_tag":  "20260317085806",
+    "ok_count":  11,
+    "total_count":  11,
+    "all_pass":  true,
+    "results":  [
+                    {
+                        "name":  "B1-超管登录",
+                        "ok":  true,
+                        "detail":  "{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzM4MjQyODYsIm11c3RfY2hhbmdlX3Bhc3N3b3JkIjpmYWxzZSwicm9sZSI6InN1cGVyX2FkbWluIiwic3RhdHVzIjoiZW5hYmxlZCIsInVzZXJfaWQiOjEyLCJ1c2VybmFtZSI6InNhX2UyZSJ9.uLcn41VnfUxAtNNPIfoxDl9A9dZh_1UzAGsFiRqtlBI\",\"user\":{\"id\":12,\"username\":\"sa_e2e\",\"role\":\"super_admin\",\"status\":\"enabled\",\"must_change_password\":false}}}"
+                    },
+                    {
+                        "name":  "C1-用户CRUD",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":17}},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"}]"
+                    },
+                    {
+                        "name":  "C2-用户组CRUD+加成员",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":4}},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"}]"
+                    },
+                    {
+                        "name":  "C3-资源CRUD",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"key\":9}},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"key\":10}},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"key\":11}},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"}]"
+                    },
+                    {
+                        "name":  "C4-资源组CRUD+同型校验",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":4}},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"RESOURCE_TYPE_MISMATCH\",\"message\":\"resource type mismatch\"}]"
+                    },
+                    {
+                        "name":  "D1-D2 授权与UPDATE规则",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"list\":\"\",\"pagination\":\"@{page=1; page_size=20; total=1}\"}},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":10}},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":11}},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"id\":12}}]"
+                    },
+                    {
+                        "name":  "E1-普通用户登录改密与权限边界",
+                        "ok":  true,
+                        "detail":  "[{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzM4MjQyOTIsIm11c3RfY2hhbmdlX3Bhc3N3b3JkIjp0cnVlLCJyb2xlIjoidXNlciIsInN0YXR1cyI6ImVuYWJsZWQiLCJ1c2VyX2lkIjoxNywidXNlcm5hbWUiOiJ1XzIwMjYwMzE3MDg1ODA2In0.sI8bJeVqMM0GCYOEhNAQoLhgNZR2HXMgPpdC23ZJ1qY\",\"user\":\"@{id=17; username=u_20260317085806; role=user; status=enabled; must_change_password=True}\"}},{\"code\":\"FIRST_LOGIN_PASSWORD_CHANGE_REQUIRED\",\"message\":\"password change required\"},{\"code\":\"OK\",\"message\":\"success\"},{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzM4MjQyOTMsIm11c3RfY2hhbmdlX3Bhc3N3b3JkIjpmYWxzZSwicm9sZSI6InVzZXIiLCJzdGF0dXMiOiJlbmFibGVkIiwidXNlcl9pZCI6MTcsInVzZXJuYW1lIjoidV8yMDI2MDMxNzA4NTgwNiJ9.dJTNXY3r_QVlLcp1YD1QzKJjDZ13F5A3KodeJUXuzz0\",\"user\":\"@{id=17; username=u_20260317085806; role=user; status=enabled; must_change_password=False}\"}},{\"code\":\"FORBIDDEN\",\"message\":\"super admin required\"}]"
+                    },
+                    {
+                        "name":  "D3-D4 撤销后权限即时变化",
+                        "ok":  true,
+                        "detail":  "{\"afterHas\":false,\"after\":[{\"permission\":\"ReadOnly\",\"resource_key\":10,\"resource_name\":\"res_api_20260317085806\",\"resource_type\":\"api\"},{\"permission\":\"ReadWrite\",\"resource_key\":9,\"resource_name\":\"res_page_20260317085806\",\"resource_type\":\"page\"}],\"before\":[{\"permission\":\"ReadOnly\",\"resource_key\":11,\"resource_name\":\"res_biz_20260317085806_u\",\"resource_type\":\"business\"},{\"permission\":\"ReadOnly\",\"resource_key\":10,\"resource_name\":\"res_api_20260317085806\",\"resource_type\":\"api\"},{\"permission\":\"ReadWrite\",\"resource_key\":9,\"resource_name\":\"res_page_20260317085806\",\"resource_type\":\"page\"}],\"beforeHas\":true}"
+                    },
+                    {
+                        "name":  "E2-普通用户资源接口一致性",
+                        "ok":  true,
+                        "detail":  "{\"code\":\"OK\",\"message\":\"success\",\"data\":{\"list\":[\"@{permission=ReadOnly; resource_key=10; resource_name=res_api_20260317085806; resource_type=api}\",\"@{permission=ReadWrite; resource_key=9; resource_name=res_page_20260317085806; resource_type=page}\"]}}"
+                    },
+                    {
+                        "name":  "F1-审计动作覆盖",
+                        "ok":  true,
+                        "detail":  "{\"need\":[\"create_user\",\"create_resource\",\"create_resource_group\",\"upsert_grant\",\"revoke_grant\",\"change_password\"],\"found\":[\"revoke_grant\",\"change_password\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"add_resource_group_member\",\"delete_resource_group\",\"create_resource_group\",\"update_resource_group\",\"create_resource_group\",\"delete_resource\",\"create_resource\",\"update_resource\",\"create_resource\",\"create_resource\",\"create_resource\",\"add_user_group_member\",\"delete_user_group\",\"create_user_group\",\"update_user_group\",\"create_user_group\",\"delete_user\",\"update_user\",\"update_user\",\"create_user\",\"create_user\",\"revoke_grant\",\"change_password\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"upsert_grant\",\"delete_resource_group\",\"create_resource_group\",\"update_resource_group\"]}"
+                    },
+                    {
+                        "name":  "F2-审计字段完整性",
+                        "ok":  true,
+                        "detail":  "{\"action\":\"revoke_grant\",\"actor_user_id\":12,\"actor_username_snapshot\":\"sa_e2e\",\"after_json\":\"\",\"before_json\":\"{\\\"id\\\": \\\"9\\\"}\",\"id\":78,\"ip\":\"[\",\"occurred_at\":\"2026-03-17T16:58:13+08:00\",\"result\":\"success\",\"target_id\":\"9\",\"target_name_snapshot\":\"9\",\"target_type\":\"grants\"}"
+                    }
+                ]
+}

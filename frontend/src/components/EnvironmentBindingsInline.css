@@ -1,0 +1,11 @@
+.env-bindings-form .el-form-item {
+  margin-bottom: 8px;
+}
+
+.env-binding-select .el-select__tags .el-tag {
+  margin-right: 6px;
+}
+
+.env-binding-select .el-tag {
+  border-radius: 10px;
+}

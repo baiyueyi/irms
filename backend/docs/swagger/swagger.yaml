@@ -1,0 +1,3550 @@
+basePath: /api
+definitions:
+  controller.ErrorResponse:
+    properties:
+      code:
+        type: string
+      data: {}
+      details: {}
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.AuditLogListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.AuditLogVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.AuditLogListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.AuditLogListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.CredentialListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.CredentialVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.CredentialListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.CredentialListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.CredentialRevealResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/vo.CredentialRevealVO'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.EmptyData:
+    type: object
+  dtoresp.EmptyResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.EmptyData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.EnvironmentListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.EnvironmentVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.EnvironmentListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.EnvironmentListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.GrantListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.GrantVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.GrantListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.GrantListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.HealthData:
+    properties:
+      status:
+        type: string
+    type: object
+  dtoresp.HealthResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.HealthData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.HostEnvironmentListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.HostEnvironmentVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.HostEnvironmentListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.HostEnvironmentListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.HostGetResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/vo.HostVO'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.HostListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.HostVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.HostListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.HostListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.IDData:
+    properties:
+      id:
+        type: integer
+    type: object
+  dtoresp.IDResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.IDData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.KeyData:
+    properties:
+      key:
+        type: integer
+    type: object
+  dtoresp.KeyResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.KeyData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.LocationListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.LocationVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.LocationListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.LocationListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.LoginData:
+    properties:
+      token:
+        type: string
+      user:
+        $ref: '#/definitions/vo.UserVO'
+    type: object
+  dtoresp.LoginResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.LoginData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.MeResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/vo.UserVO'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.PageListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.PageVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.PageListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.PageListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.PageSyncResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/vo.PageSyncVO'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.Pagination:
+    properties:
+      page:
+        type: integer
+      page_size:
+        type: integer
+      total:
+        type: integer
+    type: object
+  dtoresp.PermissionResourceListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.PermissionResourceVO'
+        type: array
+    type: object
+  dtoresp.PermissionResourceListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.PermissionResourceListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ResourceGroupListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.ResourceGroupVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.ResourceGroupListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.ResourceGroupListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ResourceGroupMemberListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.ResourceGroupMemberVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.ResourceGroupMemberListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.ResourceGroupMemberListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ResourceListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.ResourceVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.ResourceListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.ResourceListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ServiceEnvironmentListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.ServiceEnvironmentVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.ServiceEnvironmentListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.ServiceEnvironmentListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ServiceGetResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/vo.ServiceVO'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.ServiceListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.ServiceVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.ServiceListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.ServiceListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.UserGroupListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.UserGroupVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.UserGroupListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.UserGroupListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.UserGroupMemberListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.UserGroupMemberVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.UserGroupMemberListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.UserGroupMemberListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  dtoresp.UserListData:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/vo.UserVO'
+        type: array
+      pagination:
+        $ref: '#/definitions/dtoresp.Pagination'
+    type: object
+  dtoresp.UserListResponse:
+    properties:
+      code:
+        type: string
+      data:
+        $ref: '#/definitions/dtoresp.UserListData'
+      message:
+        type: string
+      request_id:
+        type: string
+    type: object
+  request.ChangePasswordRequest:
+    properties:
+      new_password:
+        type: string
+      old_password:
+        type: string
+    required:
+    - new_password
+    - old_password
+    type: object
+  request.EnvironmentCreateRequest:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+    required:
+    - code
+    - name
+    type: object
+  request.EnvironmentUpdateRequest:
+    properties:
+      code:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+    required:
+    - code
+    - name
+    - status
+    type: object
+  request.GrantUpdateRequest:
+    properties:
+      permission:
+        type: string
+    required:
+    - permission
+    type: object
+  request.GrantUpsertRequest:
+    properties:
+      object_id:
+        type: integer
+      object_type:
+        type: string
+      permission:
+        type: string
+      subject_id:
+        type: integer
+      subject_type:
+        type: string
+    required:
+    - object_id
+    - object_type
+    - permission
+    - subject_id
+    - subject_type
+    type: object
+  request.HostCreateRequest:
+    properties:
+      cloud_instance_id:
+        type: string
+      cloud_vendor:
+        type: string
+      description:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      hostname:
+        type: string
+      location_id:
+        type: integer
+      name:
+        type: string
+      os_type:
+        type: string
+      primary_address:
+        type: string
+      provider_kind:
+        type: string
+      status:
+        type: string
+    required:
+    - environment_ids
+    - hostname
+    - name
+    - primary_address
+    - provider_kind
+    type: object
+  request.HostCredentialCreateRequest:
+    properties:
+      account_name:
+        type: string
+      certificate_pem:
+        type: string
+      credential_kind:
+        type: string
+      credential_name:
+        type: string
+      description:
+        type: string
+      host_id:
+        type: integer
+      passphrase:
+        type: string
+      private_key_pem:
+        type: string
+      secret:
+        type: string
+      status:
+        type: string
+      username:
+        type: string
+    required:
+    - account_name
+    - credential_kind
+    - credential_name
+    - host_id
+    type: object
+  request.HostCredentialUpdateRequest:
+    properties:
+      account_name:
+        type: string
+      certificate_pem:
+        type: string
+      credential_kind:
+        type: string
+      credential_name:
+        type: string
+      description:
+        type: string
+      host_id:
+        type: integer
+      passphrase:
+        type: string
+      private_key_pem:
+        type: string
+      secret:
+        type: string
+      status:
+        type: string
+      username:
+        type: string
+    required:
+    - account_name
+    - credential_kind
+    - credential_name
+    - host_id
+    type: object
+  request.HostEnvironmentCreateRequest:
+    properties:
+      environment_id:
+        type: integer
+      host_id:
+        type: integer
+    required:
+    - environment_id
+    - host_id
+    type: object
+  request.HostEnvironmentDeleteRequest:
+    properties:
+      environment_id:
+        type: integer
+      host_id:
+        type: integer
+    required:
+    - environment_id
+    - host_id
+    type: object
+  request.HostUpdateRequest:
+    properties:
+      cloud_instance_id:
+        type: string
+      cloud_vendor:
+        type: string
+      description:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      hostname:
+        type: string
+      location_id:
+        type: integer
+      name:
+        type: string
+      os_type:
+        type: string
+      primary_address:
+        type: string
+      provider_kind:
+        type: string
+      status:
+        type: string
+    required:
+    - environment_ids
+    - hostname
+    - name
+    - primary_address
+    - provider_kind
+    type: object
+  request.LocationCreateRequest:
+    properties:
+      address:
+        type: string
+      code:
+        type: string
+      description:
+        type: string
+      location_type:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+    required:
+    - code
+    - location_type
+    - name
+    type: object
+  request.LocationUpdateRequest:
+    properties:
+      address:
+        type: string
+      code:
+        type: string
+      description:
+        type: string
+      location_type:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+    required:
+    - code
+    - location_type
+    - name
+    - status
+    type: object
+  request.LoginRequest:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  request.PageCreateRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+      route_path:
+        type: string
+      source:
+        type: string
+      status:
+        type: string
+    required:
+    - name
+    - route_path
+    type: object
+  request.PageSyncRequest:
+    properties:
+      dry_run:
+        type: boolean
+      routes:
+        items:
+          $ref: '#/definitions/request.PageSyncRouteItem'
+        type: array
+    type: object
+  request.PageSyncRouteItem:
+    properties:
+      name:
+        type: string
+      route_path:
+        type: string
+      source:
+        type: string
+    type: object
+  request.PageUpdateRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+      route_path:
+        type: string
+      source:
+        type: string
+      status:
+        type: string
+    required:
+    - name
+    - route_path
+    - status
+    type: object
+  request.ResourceCreateRequest:
+    properties:
+      address:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      route_path:
+        type: string
+      service_identifier:
+        type: string
+      status:
+        enum:
+        - active
+        - inactive
+        type: string
+      type:
+        enum:
+        - host
+        - service
+        type: string
+    required:
+    - name
+    - type
+    type: object
+  request.ResourceGroupCreateRequest:
+    properties:
+      description:
+        type: string
+      group_type:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    required:
+    - name
+    type: object
+  request.ResourceGroupMemberCreateRequest:
+    properties:
+      group_id:
+        type: integer
+      member_id:
+        type: integer
+      member_name:
+        type: string
+      member_type:
+        type: string
+      resource_group_id:
+        type: integer
+      resource_key:
+        type: integer
+      resource_name:
+        type: string
+      resource_type:
+        type: string
+    type: object
+  request.ResourceGroupMemberDeleteRequest:
+    properties:
+      group_id:
+        type: integer
+      member_id:
+        type: integer
+      member_name:
+        type: string
+      member_type:
+        type: string
+      resource_group_id:
+        type: integer
+      resource_key:
+        type: integer
+      resource_name:
+        type: string
+      resource_type:
+        type: string
+    type: object
+  request.ResourceGroupUpdateRequest:
+    properties:
+      description:
+        type: string
+      group_type:
+        type: string
+      name:
+        type: string
+      type:
+        type: string
+    required:
+    - name
+    type: object
+  request.ResourceUpdateRequest:
+    properties:
+      address:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      route_path:
+        type: string
+      service_identifier:
+        type: string
+      status:
+        enum:
+        - active
+        - inactive
+        type: string
+      type:
+        enum:
+        - host
+        - service
+        type: string
+    required:
+    - name
+    - type
+    type: object
+  request.ServiceCreateRequest:
+    properties:
+      cloud_product_code:
+        type: string
+      cloud_vendor:
+        type: string
+      description:
+        type: string
+      endpoint_or_identifier:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      host_id:
+        type: integer
+      name:
+        type: string
+      port:
+        type: integer
+      protocol:
+        type: string
+      service_kind:
+        type: string
+      status:
+        type: string
+    required:
+    - endpoint_or_identifier
+    - environment_ids
+    - name
+    - service_kind
+    type: object
+  request.ServiceCredentialCreateRequest:
+    properties:
+      account_name:
+        type: string
+      certificate_pem:
+        type: string
+      credential_kind:
+        type: string
+      credential_name:
+        type: string
+      description:
+        type: string
+      passphrase:
+        type: string
+      private_key_pem:
+        type: string
+      secret:
+        type: string
+      service_id:
+        type: integer
+      status:
+        type: string
+      username:
+        type: string
+    required:
+    - account_name
+    - credential_kind
+    - credential_name
+    - service_id
+    type: object
+  request.ServiceCredentialUpdateRequest:
+    properties:
+      account_name:
+        type: string
+      certificate_pem:
+        type: string
+      credential_kind:
+        type: string
+      credential_name:
+        type: string
+      description:
+        type: string
+      passphrase:
+        type: string
+      private_key_pem:
+        type: string
+      secret:
+        type: string
+      service_id:
+        type: integer
+      status:
+        type: string
+      username:
+        type: string
+    required:
+    - account_name
+    - credential_kind
+    - credential_name
+    - service_id
+    type: object
+  request.ServiceEnvironmentCreateRequest:
+    properties:
+      environment_id:
+        type: integer
+      service_id:
+        type: integer
+    required:
+    - environment_id
+    - service_id
+    type: object
+  request.ServiceEnvironmentDeleteRequest:
+    properties:
+      environment_id:
+        type: integer
+      service_id:
+        type: integer
+    required:
+    - environment_id
+    - service_id
+    type: object
+  request.ServiceUpdateRequest:
+    properties:
+      cloud_product_code:
+        type: string
+      cloud_vendor:
+        type: string
+      description:
+        type: string
+      endpoint_or_identifier:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      host_id:
+        type: integer
+      name:
+        type: string
+      port:
+        type: integer
+      protocol:
+        type: string
+      service_kind:
+        type: string
+      status:
+        type: string
+    required:
+    - endpoint_or_identifier
+    - environment_ids
+    - name
+    - service_kind
+    type: object
+  request.UserCreateRequest:
+    properties:
+      password:
+        type: string
+      role:
+        enum:
+        - super_admin
+        - user
+        type: string
+      status:
+        enum:
+        - enabled
+        - disabled
+        type: string
+      username:
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  request.UserGroupCreateRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    required:
+    - name
+    type: object
+  request.UserGroupMemberCreateRequest:
+    properties:
+      user_group_id:
+        type: integer
+      user_id:
+        type: integer
+    required:
+    - user_group_id
+    - user_id
+    type: object
+  request.UserGroupMemberDeleteRequest:
+    properties:
+      user_group_id:
+        type: integer
+      user_id:
+        type: integer
+    required:
+    - user_group_id
+    - user_id
+    type: object
+  request.UserGroupUpdateRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    required:
+    - name
+    type: object
+  request.UserUpdateRequest:
+    properties:
+      role:
+        enum:
+        - super_admin
+        - user
+        type: string
+      status:
+        enum:
+        - enabled
+        - disabled
+        type: string
+    required:
+    - role
+    - status
+    type: object
+  vo.AuditLogVO:
+    properties:
+      action:
+        type: string
+      actor_user_id:
+        type: integer
+      actor_username_snapshot:
+        type: string
+      after_json:
+        type: string
+      before_json:
+        type: string
+      id:
+        type: integer
+      ip:
+        type: string
+      occurred_at:
+        type: string
+      result:
+        type: string
+      target_id:
+        type: string
+      target_name_snapshot:
+        type: string
+      target_type:
+        type: string
+    type: object
+  vo.CredentialRevealVO:
+    properties:
+      certificate_pem:
+        type: string
+      id:
+        type: integer
+      passphrase:
+        type: string
+      private_key_pem:
+        type: string
+      secret:
+        type: string
+    type: object
+  vo.CredentialVO:
+    properties:
+      account_name:
+        type: string
+      created_at:
+        type: string
+      credential_kind:
+        type: string
+      credential_name:
+        type: string
+      description:
+        type: string
+      host_id:
+        type: integer
+      id:
+        type: integer
+      service_id:
+        type: integer
+      status:
+        type: string
+      updated_at:
+        type: string
+      username:
+        type: string
+    type: object
+  vo.EnvironmentVO:
+    properties:
+      code:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.GrantVO:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      object_id:
+        type: integer
+      object_name:
+        type: string
+      object_type:
+        type: string
+      object_type_display:
+        type: string
+      permission:
+        type: string
+      subject_id:
+        type: integer
+      subject_name:
+        type: string
+      subject_type:
+        type: string
+      subject_type_display:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.HostEnvironmentVO:
+    properties:
+      created_at:
+        type: string
+      environment_id:
+        type: integer
+      host_id:
+        type: integer
+      id:
+        type: integer
+    type: object
+  vo.HostVO:
+    properties:
+      cloud_instance_id:
+        type: string
+      cloud_vendor:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      environment_source:
+        type: string
+      environments:
+        items:
+          type: string
+        type: array
+      hostname:
+        type: string
+      id:
+        type: integer
+      inherited_environment_ids:
+        items:
+          type: integer
+        type: array
+      location:
+        type: string
+      location_id:
+        type: integer
+      name:
+        type: string
+      os_type:
+        type: string
+      own_environment_ids:
+        items:
+          type: integer
+        type: array
+      primary_address:
+        type: string
+      provider_kind:
+        type: string
+      self_environments:
+        items:
+          type: string
+        type: array
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.LocationVO:
+    properties:
+      address:
+        type: string
+      code:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      location_type:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.PageSyncRouteVO:
+    properties:
+      name:
+        type: string
+      route_path:
+        type: string
+      source:
+        type: string
+      status:
+        type: string
+    type: object
+  vo.PageSyncSummaryVO:
+    properties:
+      created:
+        type: integer
+      dry_run:
+        type: boolean
+      input_total:
+        type: integer
+      retired:
+        type: integer
+      unchanged:
+        type: integer
+      updated:
+        type: integer
+    type: object
+  vo.PageSyncVO:
+    properties:
+      changed_routes:
+        items:
+          $ref: '#/definitions/vo.PageSyncRouteVO'
+        type: array
+      existing_routes:
+        items:
+          $ref: '#/definitions/vo.PageSyncRouteVO'
+        type: array
+      new_routes:
+        items:
+          $ref: '#/definitions/vo.PageSyncRouteVO'
+        type: array
+      retired_routes:
+        items:
+          $ref: '#/definitions/vo.PageSyncRouteVO'
+        type: array
+      summary:
+        $ref: '#/definitions/vo.PageSyncSummaryVO'
+    type: object
+  vo.PageVO:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      grant_count:
+        type: integer
+      id:
+        type: integer
+      name:
+        type: string
+      route_path:
+        type: string
+      source:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.PermissionResourceVO:
+    properties:
+      permission:
+        type: string
+      resource_key:
+        type: integer
+      resource_name:
+        type: string
+      resource_type:
+        type: string
+      route_path:
+        type: string
+    type: object
+  vo.ResourceGroupMemberVO:
+    properties:
+      created_at:
+        type: string
+      group_id:
+        type: integer
+      group_type:
+        type: string
+      id:
+        type: integer
+      member_id:
+        type: integer
+      member_name:
+        type: string
+      member_type:
+        type: string
+    type: object
+  vo.ResourceGroupVO:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      group_type:
+        type: string
+      id:
+        type: integer
+      member_count:
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.ResourceVO:
+    properties:
+      address:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      key:
+        type: integer
+      name:
+        type: string
+      route_path:
+        type: string
+      service_identifier:
+        type: string
+      status:
+        type: string
+      type:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.ServiceEnvironmentVO:
+    properties:
+      created_at:
+        type: string
+      environment_id:
+        type: integer
+      id:
+        type: integer
+      service_id:
+        type: integer
+    type: object
+  vo.ServiceVO:
+    properties:
+      cloud_product_code:
+        type: string
+      cloud_vendor:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      endpoint_or_identifier:
+        type: string
+      environment_ids:
+        items:
+          type: integer
+        type: array
+      environment_source:
+        type: string
+      environments:
+        items:
+          type: string
+        type: array
+      host:
+        type: string
+      host_id:
+        type: integer
+      id:
+        type: integer
+      inherited_environment_ids:
+        items:
+          type: integer
+        type: array
+      name:
+        type: string
+      own_environment_ids:
+        items:
+          type: integer
+        type: array
+      port:
+        type: integer
+      protocol:
+        type: string
+      self_environments:
+        items:
+          type: string
+        type: array
+      service_kind:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.UserGroupMemberVO:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      user_group_id:
+        type: integer
+      user_id:
+        type: integer
+      user_name:
+        type: string
+    type: object
+  vo.UserGroupVO:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: integer
+      member_count:
+        type: integer
+      name:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  vo.UserVO:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: integer
+      must_change_password:
+        type: boolean
+      role:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: IRMS 后端 API（Gin + Gorm + Swagger）
+  title: IRMS API
+  version: "0.1"
+paths:
+  /audit-logs:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Target type
+        in: query
+        name: target_type
+        type: string
+      - description: Target ID
+        in: query
+        name: target_id
+        type: string
+      - description: Result
+        in: query
+        name: result
+        type: string
+      - description: From time
+        in: query
+        name: from
+        type: string
+      - description: To time
+        in: query
+        name: to
+        type: string
+      - description: Actor user ID; invalid -> 400
+        in: query
+        name: actor_user_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.AuditLogListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出审计日志
+      tags:
+      - audit-logs
+  /auth/change-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ChangePasswordRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ChangePasswordRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 修改密码
+      tags:
+      - auth
+  /auth/login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: LoginRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.LoginResponse'
+      summary: 登录
+      tags:
+      - auth
+  /environments:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EnvironmentListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出环境
+      tags:
+      - environments
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: EnvironmentCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.EnvironmentCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建环境
+      tags:
+      - environments
+  /environments/{id}:
+    delete:
+      parameters:
+      - description: Environment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除环境
+      tags:
+      - environments
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Environment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: EnvironmentUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.EnvironmentUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新环境
+      tags:
+      - environments
+  /grants:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword
+        in: query
+        name: keyword
+        type: string
+      - description: Subject type; invalid -> 400
+        enum:
+        - user
+        - user_group
+        in: query
+        name: subject_type
+        type: string
+      - description: Subject ID; invalid -> 400
+        in: query
+        name: subject_id
+        type: integer
+      - description: Object type; invalid -> 400
+        enum:
+        - page
+        - host
+        - host_group
+        - service
+        - service_group
+        - host_credential
+        - service_credential
+        in: query
+        name: object_type
+        type: string
+      - description: Object ID; invalid -> 400
+        in: query
+        name: object_id
+        type: integer
+      - description: Permission code; invalid -> 400
+        enum:
+        - page.view
+        - host.read
+        - host.write
+        - service.read
+        - service.write
+        - host_credential.read
+        - host_credential.write
+        - service_credential.read
+        - service_credential.write
+        in: query
+        name: permission
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.GrantListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出授权关系
+      tags:
+      - grants
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: GrantUpsertRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.GrantUpsertRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建或更新授权关系
+      tags:
+      - grants
+  /grants/{id}:
+    delete:
+      parameters:
+      - description: Grant ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除授权关系
+      tags:
+      - grants
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Grant ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: GrantUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.GrantUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新授权关系
+      tags:
+      - grants
+  /health:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.HealthResponse'
+      summary: 健康检查
+      tags:
+      - health
+  /host-credentials:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Host ID; invalid -> 400
+        in: query
+        name: host_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.CredentialListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出主机凭据
+      tags:
+      - credentials
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: HostCredentialCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostCredentialCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建主机凭据
+      tags:
+      - credentials
+  /host-credentials/{id}:
+    delete:
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除主机凭据
+      tags:
+      - credentials
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: HostCredentialUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostCredentialUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新主机凭据
+      tags:
+      - credentials
+  /host-credentials/{id}/reveal:
+    post:
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.CredentialRevealResponse'
+      security:
+      - BearerAuth: []
+      summary: 查看主机凭据明文
+      tags:
+      - credentials
+  /host-environments:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: HostEnvironmentDeleteRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostEnvironmentDeleteRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除主机环境绑定
+      tags:
+      - host-environments
+    get:
+      parameters:
+      - description: Host ID; invalid -> 400
+        in: query
+        name: host_id
+        required: true
+        type: integer
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.HostEnvironmentListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出主机环境绑定
+      tags:
+      - host-environments
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: HostEnvironmentCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostEnvironmentCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建主机环境绑定
+      tags:
+      - host-environments
+  /hosts:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name/hostname like)
+        in: query
+        name: keyword
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - active
+        - inactive
+        in: query
+        name: status
+        type: string
+      - description: Provider kind; invalid -> 400
+        enum:
+        - physical
+        - vm
+        - cloud_instance
+        - other
+        in: query
+        name: provider_kind
+        type: string
+      - description: Location ID; invalid -> 400
+        in: query
+        name: location_id
+        type: integer
+      - description: Environment ID; invalid -> 400
+        in: query
+        name: environment_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.HostListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出主机
+      tags:
+      - hosts
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: HostCreateRequest (environment_ids required, [] allowed)
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建主机
+      tags:
+      - hosts
+  /hosts/{id}:
+    delete:
+      parameters:
+      - description: Host ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除主机
+      tags:
+      - hosts
+    get:
+      parameters:
+      - description: Host ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.HostGetResponse'
+      security:
+      - BearerAuth: []
+      summary: 获取主机详情
+      tags:
+      - hosts
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Host ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: HostUpdateRequest (environment_ids required, [] allowed)
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.HostUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新主机
+      tags:
+      - hosts
+  /hosts/{id}/services:
+    get:
+      parameters:
+      - description: Host ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - active
+        - inactive
+        in: query
+        name: status
+        type: string
+      - description: Service kind; invalid -> 400
+        enum:
+        - app
+        - api
+        - database
+        - middleware
+        - cloud_product
+        - other
+        in: query
+        name: service_kind
+        type: string
+      - description: Environment ID; invalid -> 400
+        in: query
+        name: environment_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ServiceListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出指定主机下的服务
+      tags:
+      - hosts
+  /locations:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.LocationListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出位置
+      tags:
+      - locations
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: LocationCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.LocationCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建位置
+      tags:
+      - locations
+  /locations/{id}:
+    delete:
+      parameters:
+      - description: Location ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除位置
+      tags:
+      - locations
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Location ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: LocationUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.LocationUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新位置
+      tags:
+      - locations
+  /me:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.MeResponse'
+      security:
+      - BearerAuth: []
+      summary: 获取当前用户
+      tags:
+      - auth
+  /pages:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - active
+        - inactive
+        in: query
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.PageListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出页面资源
+      tags:
+      - pages
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: PageCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.PageCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建页面资源
+      tags:
+      - pages
+  /pages/{id}:
+    delete:
+      parameters:
+      - description: Page ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除页面资源
+      tags:
+      - pages
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Page ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: PageUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.PageUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新页面资源
+      tags:
+      - pages
+  /pages/sync:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: PageSyncRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.PageSyncRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.PageSyncResponse'
+      security:
+      - BearerAuth: []
+      summary: 同步页面路由
+      tags:
+      - pages
+  /permissions/resources:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.PermissionResourceListResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出我的可访问页面（兼容路径：/permissions/resources）
+      tags:
+      - permissions
+  /resource-group-members:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: group_id/member_id/member_type 为主，resource_* 为兼容字段
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceGroupMemberDeleteRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 移除资源组成员
+      tags:
+      - resource-groups
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Group ID; invalid -> 400
+        in: query
+        name: group_id
+        type: integer
+      - description: Group type; invalid -> 400
+        enum:
+        - host_group
+        - service_group
+        in: query
+        name: group_type
+        type: string
+      - description: 'Deprecated: use group_id'
+        in: query
+        name: resource_group_id
+        type: integer
+      - description: Search keyword
+        in: query
+        name: keyword
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ResourceGroupMemberListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出主机组/服务组成员
+      tags:
+      - resource-groups
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: group_id/member_id/member_type 为主，resource_* 为兼容字段
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceGroupMemberCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 添加资源组成员
+      tags:
+      - resource-groups
+  /resource-groups:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      - description: Group type; invalid -> 400
+        enum:
+        - host_group
+        - service_group
+        in: query
+        name: group_type
+        type: string
+      - description: 'Deprecated: use group_type'
+        enum:
+        - host
+        - service
+        in: query
+        name: type
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ResourceGroupListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出主机组/服务组
+      tags:
+      - resource-groups
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: group_type 为主，type 为兼容字段
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceGroupCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建资源组
+      tags:
+      - resource-groups
+  /resource-groups/{id}:
+    delete:
+      parameters:
+      - description: Group ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除资源组
+      tags:
+      - resource-groups
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Group ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: group_type 为主，type 为兼容字段
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceGroupUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新资源组
+      tags:
+      - resource-groups
+  /resources:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      - description: Resource type; invalid -> 400
+        enum:
+        - host
+        - service
+        in: query
+        name: type
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - active
+        - inactive
+        in: query
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ResourceListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: '[Deprecated][Compatibility] 列出资源'
+      tags:
+      - resources
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ResourceCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.KeyResponse'
+      security:
+      - BearerAuth: []
+      summary: '[Deprecated][Compatibility] 创建资源'
+      tags:
+      - resources
+  /resources/{key}:
+    delete:
+      parameters:
+      - description: Resource Key
+        in: path
+        name: key
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: '[Deprecated][Compatibility] 删除资源'
+      tags:
+      - resources
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Resource Key
+        in: path
+        name: key
+        required: true
+        type: integer
+      - description: ResourceUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ResourceUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: '[Deprecated][Compatibility] 更新资源'
+      tags:
+      - resources
+  /service-credentials:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Service ID; invalid -> 400
+        in: query
+        name: service_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.CredentialListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出服务凭据
+      tags:
+      - credentials
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ServiceCredentialCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceCredentialCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建服务凭据
+      tags:
+      - credentials
+  /service-credentials/{id}:
+    delete:
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除服务凭据
+      tags:
+      - credentials
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: ServiceCredentialUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceCredentialUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新服务凭据
+      tags:
+      - credentials
+  /service-credentials/{id}/reveal:
+    post:
+      parameters:
+      - description: Credential ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.CredentialRevealResponse'
+      security:
+      - BearerAuth: []
+      summary: 查看服务凭据明文
+      tags:
+      - credentials
+  /service-environments:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: ServiceEnvironmentDeleteRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceEnvironmentDeleteRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除服务环境绑定
+      tags:
+      - service-environments
+    get:
+      parameters:
+      - description: Service ID; invalid -> 400
+        in: query
+        name: service_id
+        required: true
+        type: integer
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ServiceEnvironmentListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出服务环境绑定
+      tags:
+      - service-environments
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ServiceEnvironmentCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceEnvironmentCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建服务环境绑定
+      tags:
+      - service-environments
+  /services:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - active
+        - inactive
+        in: query
+        name: status
+        type: string
+      - description: Service kind; invalid -> 400
+        enum:
+        - app
+        - api
+        - database
+        - middleware
+        - cloud_product
+        - other
+        in: query
+        name: service_kind
+        type: string
+      - description: Host ID; invalid -> 400
+        in: query
+        name: host_id
+        type: integer
+      - description: Environment ID; invalid -> 400
+        in: query
+        name: environment_id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ServiceListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出服务
+      tags:
+      - services
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: ServiceCreateRequest (environment_ids required, [] allowed)
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建服务
+      tags:
+      - services
+  /services/{id}:
+    delete:
+      parameters:
+      - description: Service ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除服务
+      tags:
+      - services
+    get:
+      parameters:
+      - description: Service ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.ServiceGetResponse'
+      security:
+      - BearerAuth: []
+      summary: 获取服务详情
+      tags:
+      - services
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Service ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: ServiceUpdateRequest (environment_ids required, [] allowed)
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.ServiceUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新服务
+      tags:
+      - services
+  /user-group-members:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - description: UserGroupMemberDeleteRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserGroupMemberDeleteRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 移除用户组成员
+      tags:
+      - user-group-members
+    get:
+      parameters:
+      - description: UserGroup ID
+        in: query
+        name: user_group_id
+        required: true
+        type: integer
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (username like)
+        in: query
+        name: keyword
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.UserGroupMemberListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出用户组成员
+      tags:
+      - user-group-members
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: UserGroupMemberCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserGroupMemberCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 添加用户组成员
+      tags:
+      - user-group-members
+  /user-groups:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (name like)
+        in: query
+        name: keyword
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.UserGroupListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出用户组
+      tags:
+      - user-groups
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: UserGroupCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserGroupCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建用户组
+      tags:
+      - user-groups
+  /user-groups/{id}:
+    delete:
+      parameters:
+      - description: UserGroup ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除用户组
+      tags:
+      - user-groups
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: UserGroup ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: UserGroupUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserGroupUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新用户组
+      tags:
+      - user-groups
+  /users:
+    get:
+      parameters:
+      - description: Page (>=1); invalid -> 400
+        in: query
+        name: page
+        type: integer
+      - description: Page size (1~100); invalid -> 400
+        in: query
+        name: page_size
+        type: integer
+      - description: Search keyword (username like)
+        in: query
+        name: keyword
+        type: string
+      - description: Role; invalid -> 400
+        enum:
+        - super_admin
+        - user
+        in: query
+        name: role
+        type: string
+      - description: Status; invalid -> 400
+        enum:
+        - enabled
+        - disabled
+        in: query
+        name: status
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.UserListResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/controller.ErrorResponse'
+      security:
+      - BearerAuth: []
+      summary: 列出用户
+      tags:
+      - users
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: UserCreateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserCreateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.IDResponse'
+      security:
+      - BearerAuth: []
+      summary: 创建用户
+      tags:
+      - users
+  /users/{id}:
+    delete:
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 删除用户
+      tags:
+      - users
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: User ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: UserUpdateRequest
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/request.UserUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dtoresp.EmptyResponse'
+      security:
+      - BearerAuth: []
+      summary: 更新用户
+      tags:
+      - users
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
